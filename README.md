@@ -1,2 +1,7 @@
+## SportsManagement 
+#### A web-based platform for managing various sports activities and events in a sports department.
+#### User authentication and authorization.
+#### Ability to post notices and announcements in various categories events.
+#### Scheduling and management of sports events and tournaments.
+#### Technologies: HTML5, CSS3, Bootstrap, ReactJs, Mongoose, Node Js, ExpressJs.
 
-#Live site:-https://sportsmanagement-af69b.web.app/
