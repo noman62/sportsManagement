@@ -1,0 +1,93 @@
+
+
+nav{
+    box-shadow: 1px 1px 3px rgb(223, 190, 255) ;
+}
+nav .log-button{
+    color: rgb(110, 38, 178);
+}
+nav .nav-link{
+    color: rgb(110, 38, 178) !important;
+}
+nav .button{
+    background-color: rgb(110, 38, 178);
+    color: aliceblue;
+    font-weight: bolder;
+}
+.create-button{
+    background-color: rgb(110, 38, 178);
+    color: aliceblue;
+    font-weight: bolder;
+}
+.navbar-brand{
+    color: rgb(110, 38, 178) !important;
+    font-size: 25px;
+}
+
+  /* .pills{
+    margin-top: 60px;
+    padding-top: 20px;
+    min-height: 65vh;
+    box-shadow: 0px 0px 10px rgb(180, 180, 180);
+      background-color: rgb(253, 253, 253);
+  } */
+  .pills .nav-tabs{
+      display:flex ;
+      justify-content: space-around;
+      align-items: center;
+
+  }
+  .user-deshboard-image{
+      width: 150px;
+      margin: 30px;
+      border: 5px solid rgb(143, 115, 255);
+  }
+  .pills .nav-tabs{
+      background-color: aliceblue;
+  }
+  .pill2{
+    margin-top: 1px;
+    padding-top: 20px;
+    min-height: 65vh;
+    box-shadow: 0px 0px 10px rgb(180, 180, 180);
+    background-color: rgb(253, 253, 253);
+  }
+  .pill2 .nav-tabs{
+    display:flex ;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.image-section{
+    background: rgb(120, 156, 141);
+}
+.image-section img{
+    margin: 20px;
+    border: 5px solid white;
+}
+.catagory-list{
+    margin-top: 100px;
+}
+.catagory-list ul{
+    list-style: none;
+}
+.catagory-list ul li{
+    padding-left: 10px ;
+    padding-top: 5px   ;
+    padding-bottom: 3px;
+    border-bottom: 3px solid rgb(162, 214, 253) ;
+}
+.catagory-list ul li:hover{
+    background-color: rgb(215, 231, 250);
+    border-bottom: 3px solid rgb(0, 95, 197) ;
+}
+.catagory-list ul a{
+    color:black;
+    text-decoration: none;
+
+}
+.catagory-list ul a:hover{
+    color:rgb(0, 45, 150);
+    text-decoration: none;
+
+}

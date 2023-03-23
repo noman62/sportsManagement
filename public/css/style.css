@@ -1,0 +1,312 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+} 
+.nstu_logo{
+     height: 80px;
+     padding: 5px;
+     float:left;
+     margin-top: 15px;   
+}
+.nstu{
+    float: left;
+    margin-top: 35px;
+    padding-left: 20px;
+}
+.main-heading{
+    background-color: 		#ECF2FF;
+    color: black; 
+    /* font-style:oblique; */
+    height: 100px;
+}
+
+
+
+
+/* .slide{
+    border: 4px solid #010f4e;
+} */
+
+
+
+
+
+
+.carousel-inner img {
+    width: 100%;
+    height: 79vh;
+}
+
+
+.about-img{
+    height: 350px;
+    padding: 20px;
+    border: 3px solid rgb(99, 104, 95);
+    margin-top: 70px;
+  
+  }
+
+  .catagory-list{
+    margin-top: 100px;
+    margin-left: 100px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+    
+}
+.catagory-list ul{
+    list-style: none;
+}
+.catagory-list ul li{
+    padding-left: 10px ;
+    padding-top: 5px   ;
+    padding-bottom: 3px;
+    border-bottom: 3px solid rgb(162, 214, 253) ;
+}
+.catagory-list ul li:hover{
+    background-color: rgb(215, 231, 250);
+    border-bottom: 3px solid rgb(0, 95, 197) ;
+}
+.catagory-list ul a{
+    color:black;
+    text-decoration: none;
+
+}
+.catagory-list ul a:hover{
+    color:rgb(0, 45, 150);
+    text-decoration: none;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* login and register Pages */
+.login{
+    min-height: 100vh;
+    background-image: url('../image/Fountain\ pen.png');
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.dept{
+
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+.login-btn{
+    color: #ffffff;
+    font-size: 15px;
+    width: 350px;
+    text-align: center;
+    border-radius: 30px;
+    background: linear-gradient(to right,navy,gray);
+    outline: none;
+}
+.login-btn:hover{
+    color: beige;
+    font-size: 20px;
+    width: 350px;
+    border-radius: 30px;
+    background: linear-gradient(to right,rgb(25, 25, 139),rgb(170, 168, 168));
+    outline: none;
+}
+
+
+
+
+
+  
+
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+
+  .upload-form{
+      padding: 20px;
+      border: 2px dashed rgb(195, 196, 252);
+  }
+  .list-of-notice{
+    padding: 20px;
+    border: 2px dashed rgb(195, 196, 252);
+  }
+  .image-profile{
+      width: 150px;
+      height: 150px;
+  }
+  .profile{
+    padding: 20px;
+    border: 2px dashed rgb(195, 196, 252);
+  }
+  .edit-profile{
+    padding: 20px;
+    border: 2px dashed rgb(195, 196, 252);
+  }
+  /* #upload{
+      display: none;
+  } */
+  #list-of-notice{
+    display: none;
+  }
+  #profile{
+    display: none;
+  }
+  #edit-profile{
+    display: none;
+  }
+
+@media (max-width: 768px) {
+    .top-time {
+        display: none;
+
+
+    }
+    .top-time1{
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 660px) {
+    .top-time {
+        display: none;
+
+    }
+     .top-time1{
+        width: 100%;
+    }
+
+    /* .pdf-button{
+      margin-left: 120px;
+      justify-content: center;
+      justify-items: center;
+    } */
+
+}
+.carousel-slide{
+    height: 100px;
+}
+.image-section{
+    background: MintCream;
+}
+.image-section img{
+    margin: 20px;
+    border: 5px solid white;
+}
+.loginName{
+  margin-top: 100px;
+  font-weight: bold;
+}
+
+
+.nav-item{
+  border-left: 1px solid rgb(221, 221, 221);
+  border-right: 1px solid rgb(221, 221, 221);
+}
+.home{
+  background-image:
+  linear-gradient(to bottom, rgba(96, 120, 255, 0.199), rgba(158, 158, 158, 0.253)),
+  url('../assets/nstu.jpg');
+  width: 100%;
+  min-height: 70vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+  color: white;
+  
+
+}
+.event-main-page{
+  background-image:
+  linear-gradient(to bottom, rgba(96, 120, 255, 0.199), rgba(158, 158, 158, 0.253)),
+  url('../assets/nstu.jpg');
+  width: 100%;
+  min-height: 40vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+  color: white;
+}
+.event-main-page .dept{
+  background-color: rgba(44, 44, 44, 0.671);
+  padding: 100px;
+}
+.event-item a{
+  color: black;
+  text-decoration: none;
+  
+}
+.sport img{
+  height: 150px;
+  padding: 5px;
+}
+.event-item a:hover{
+  color: black;
+  text-decoration: none;
+  box-shadow: 1px black;
+  
+}
+.home .dept{
+  background-color: rgba(44, 44, 44, 0.671);
+  padding: 100px;
+}
+.carousel-inner img{
+  max-height: 50vh;
+}
+.event{
+  background: rgba(225, 235, 255, 0.644);
+  padding: 20px;
+}
+.events{
+  background: rgb(204, 226, 255);
+  border-radius: 20px;
+}
+.vc img{
+  
+  height: 100px;
+  border: 2px solid black;
+  border-radius: 100%;
+}
+.photo-gallary{
+  background-color: rgba(208, 255, 208, 0.363);
+}
+.marquee{
+  background:rgba(116, 255, 127, 0.2) ;
+  max-height:50px ;
+}
+marquee ul{
+  list-style: none !important;
+  display: flex;
+  padding-top: 5px;
+}
+.marquee .news{
+  background: rgba(27, 0, 180, 0.76);
+}
+.marquee-image img{
+  width: 200px;
+  height: 200px; 
+  margin: 5px;
+  border: 3px solid rgba(0, 3, 180, 0.507) ;
+}
+.marquee-image-div{
+  background: rgba(0, 250, 5, 0.06) ;
+}

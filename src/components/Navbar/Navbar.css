@@ -1,0 +1,26 @@
+
+body{
+    font-family: 'Courgette', cursive !important; 
+}
+
+nav .log-button{
+    color: rgb(110, 38, 178);
+}
+nav .nav-link{
+    color: rgb(110, 38, 178) !important;
+}
+nav .button{
+    background-color: rgb(110, 38, 178);
+    color: aliceblue;
+    font-weight: bolder;
+}
+.create-button{
+    background-color: rgb(110, 38, 178);
+    color: aliceblue;
+    font-weight: bolder;
+}
+.navbar-brand{
+    color: rgb(110, 38, 178) !important;
+    font-size: 25px;
+}
+

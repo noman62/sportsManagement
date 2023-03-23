@@ -1,0 +1,71 @@
+
+body{
+    /* background-color: rgba(236, 252, 255, 0.279) !important; */
+}
+.med-nav{
+    background-color: rgb(50, 175, 203);
+    color: aliceblue !important;
+
+}
+.med-hero img{
+   
+    max-height: 80vh !important;
+    
+}
+
+.top-med .card img{
+    height: 200px !important;
+}
+.top-med .card{
+    box-shadow: 1px 2px 3px rgb(105, 111, 180);
+}
+.med-contact{
+    background-color: rgb(210, 216, 252);
+}
+.all-med{
+    height: 60vh;
+    background: linear-gradient(to right, rgba(216, 255, 239, 0.5), rgb(225, 251, 255)),
+    url("https://www.press.jhu.edu/sites/default/files/styles/max_325x325/public/2021-09/Health%20%26%20Medicine.png?itok=GYVxGfR7");
+   
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-position: center; 
+    
+    box-shadow: 2px 2px 7px rgb(2, 2, 2);
+}
+.list .card{
+    color: black;
+    text-decoration: none;
+    /* border: none; */
+}
+.list .card:hover{
+    color: black;
+    text-decoration: none;
+    background-color: rgb(187, 223, 255);
+}
+.list a:hover{
+    text-decoration: none;
+    
+}
+.description{
+    text-align: justify;
+    text-justify: inter-word;  
+}
+.btn{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.card{
+    background-color:aliceblue;
+}
+.bg-1 {
+    /* The image used */
+    background-image: url("./minar.jpg");
+  
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
