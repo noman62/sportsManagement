@@ -44,7 +44,7 @@ const UploadProduct = () => {
     e.preventDefault()
     setLoading(true)
     axios
-      .post('http://localhost:8000/api/addProduct', {
+      .post('https://sportsmangement.onrender.com/api/addProduct', {
         ...user,
       })
       .then(response => {

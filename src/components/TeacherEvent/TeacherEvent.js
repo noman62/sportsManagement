@@ -10,7 +10,7 @@ const TeacherEvent = () => {
   const [data, setData] = useState([])
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/events')
+    fetch('https://sportsmangement.onrender.com/api/events')
       .then(res => res.json())
       .then(data1 => setData(data1))
   }, [])

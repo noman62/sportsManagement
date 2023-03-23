@@ -12,7 +12,7 @@ const UserRequest = () => {
 
   const getAllUser = async () => {
     const { data } = await axios.get(
-      `http://localhost:8000/api/requests?email=${user.user.email}`
+      `https://sportsmangement.onrender.com/api/requests?email=${user.user.email}`
     )
     setAllUser(data)
     console.log(data)

@@ -11,7 +11,7 @@ const Event = () => {
   const [appointmentInfo, setAppointmentInfo] = useState([])
 
   const getAppointments = async () => {
-    const { data } = await axios.get('http://localhost:8000/api/allNotice')
+    const { data } = await axios.get('https://sportsmangement.onrender.com/api/allNotice')
 
     setAppointmentInfo(data)
   }

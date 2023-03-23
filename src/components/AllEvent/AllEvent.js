@@ -11,7 +11,7 @@ const AllEvent = () => {
   const history = useHistory()
   const user = useSelector(selectUser)
   const getAllUser = async () => {
-    const { data } = await axios.get('http://localhost:8000/api/events')
+    const { data } = await axios.get('https://sportsmangement.onrender.com/api/events')
     setAllUser(data)
     console.log(data)
   }
@@ -20,7 +20,7 @@ const AllEvent = () => {
   }, [])
   const handleDelete = id => {
     console.log("emon",id);
-    fetch(`http://localhost:8000/api/deleteEvent/${id}`, {
+    fetch(`https://sportsmangement.onrender.com/api/deleteEvent/${id}`, {
       method: 'DELETE'
     })
       .then(res => res.json())

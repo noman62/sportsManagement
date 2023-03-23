@@ -26,7 +26,7 @@ const Login = () => {
         e.preventDefault()
         setLoading(true)
         axios
-          .post('http://localhost:8000/api/login', {
+          .post('https://sportsmangement.onrender.com/api/login', {
             ...user
           })
           .then(response => {

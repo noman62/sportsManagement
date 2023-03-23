@@ -11,7 +11,7 @@ const VolleyballFixture = () => {
   const [appointmentInfo, setAppointmentInfo] = useState([])
 
   const getAppointments = async () => {
-    const { data } = await axios.get('http://localhost:8000/api/allfixture')
+    const { data } = await axios.get('https://sportsmangement.onrender.com/api/allfixture')
 console.log(data)
     setAppointmentInfo(data)
   }

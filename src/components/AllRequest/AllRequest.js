@@ -12,7 +12,7 @@ const AllRequest = () => {
   const history = useHistory()
   const getAllUser = async () => {
     const { data } = await axios.get(
-      'http://localhost:8000/api/allrequest'
+      'https://sportsmangement.onrender.com/api/allrequest'
     )
     setAllUser(data)
     console.log(data)
@@ -24,7 +24,7 @@ const AllRequest = () => {
     console.log(id)
     axios
       .put(
-        `http://localhost:8000/api/updateRequest/${id}`,
+        `https://sportsmangement.onrender.com/api/updateRequest/${id}`,
         { withCredentials: true }
       )
       .then(res => {
@@ -42,7 +42,7 @@ const AllRequest = () => {
   }
   const handleDelete = id => {
     fetch(
-      `http://localhost:8000/api/deleteRequest/${id}`,
+      `https://sportsmangement.onrender.com/api/deleteRequest/${id}`,
       {
         method: 'DELETE'
       }

@@ -11,7 +11,7 @@ const AllProduct = () => {
   const history = useHistory()
   const user = useSelector(selectUser)
   const getAllUser = async () => {
-    const { data } = await axios.get('http://localhost:8000/api/products')
+    const { data } = await axios.get('https://sportsmangement.onrender.com/api/products')
     setAllUser(data)
     console.log(data)
   }
@@ -20,7 +20,7 @@ const AllProduct = () => {
   }, [])
   const handleDelete = id => {
     console.log("emon",id);
-    fetch(`http://localhost:8000/api/deleteProduct/${id}`, {
+    fetch(`https://sportsmangement.onrender.com/api/deleteProduct/${id}`, {
       method: 'DELETE'
     })
       .then(res => res.json())

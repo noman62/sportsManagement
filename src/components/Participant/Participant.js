@@ -12,7 +12,7 @@ const Participant = () => {
 
   const getAllUser = async () => {
     const { data } = await axios.get(
-      `http://localhost:8000/api/user-donation?email=${user.user.email}`
+      `https://sportsmangement.onrender.com/api/user-donation?email=${user.user.email}`
     )
     setAllUser(data)
     console.log(data)

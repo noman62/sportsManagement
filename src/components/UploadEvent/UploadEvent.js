@@ -28,7 +28,7 @@ const UploadEvent = () => {
     e.preventDefault()
     setLoading(true)
     axios
-      .post('http://localhost:8000/api/addEvent', {
+      .post('https://sportsmangement.onrender.com/api/addEvent', {
         ...user
       })
       .then(response => {

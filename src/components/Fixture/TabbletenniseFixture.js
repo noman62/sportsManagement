@@ -26,7 +26,7 @@ const TabbleteniseFixture = () => {
     e.preventDefault()
     setLoading(true)
     axios
-      .post('http://localhost:8000/api/addFixture', {
+      .post('https://sportsmangement.onrender.com/api/addFixture', {
         ...user
       })
       .then(response => {

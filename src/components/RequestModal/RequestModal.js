@@ -34,7 +34,7 @@ const RequestModal = () => {
     setLoading(true)
 
     axios
-      .post('http://localhost:8000/api/registration', {
+      .post('https://sportsmangement.onrender.com/api/registration', {
         ...request,
         email: user.user.email
       })

@@ -23,11 +23,11 @@ const Homepage = () => {
 //     .then(data=> setnewNotice(data))
 // });
   const getAllNotice = async () => {
-    const { data } = await axios.get('http://localhost:8000/api/allNotice')
+    const { data } = await axios.get('https://sportsmangement.onrender.com/api/allNotice')
     setNotices(data)
   }
   const getAllEvent = async () => {
-    const { data } = await axios.get('http://localhost:8000/api/allEvent')
+    const { data } = await axios.get('https://sportsmangement.onrender.com/api/allEvent')
     // setNotices(data)
     setEvents(data)
     console.log(data)

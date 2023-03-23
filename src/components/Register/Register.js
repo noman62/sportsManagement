@@ -43,7 +43,7 @@ const Register = () => {
     e.preventDefault()
     setLoading(true)
     axios
-      .post('http://localhost:8000/api/register', {
+      .post('https://sportsmangement.onrender.com/api/register', {
         ...user
       })
       .then(response => {

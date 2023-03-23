@@ -15,7 +15,7 @@ const Navbar = () => {
   const handleLogout = async (e) => {
     e.preventDefault();
     // make state null
-    const { data } = await axios.get('http://localhost:8000/api/logout');
+    const { data } = await axios.get('https://sportsmangement.onrender.com/api/logout');
     dispatch(logout());
     window.alert("logout Successfully")
     history.push("/home");

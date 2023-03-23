@@ -46,7 +46,7 @@ const UploadNotice = () => {
     e.preventDefault()
     setLoading(true)
     axios
-      .post('http://localhost:8000/api/notice', {
+      .post('https://sportsmangement.onrender.com/api/notice', {
         ...user
       })
       .then(response => {

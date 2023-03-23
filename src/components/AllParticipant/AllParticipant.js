@@ -14,7 +14,7 @@ const AllParticipant = () => {
 
   const getAllUser = async () => {
     const { data } = await axios.get(
-      'http://localhost:8000/api/registrations'
+      'https://sportsmangement.onrender.com/api/registrations'
     )
     setAllUser(data)
     console.log(data)
@@ -25,7 +25,7 @@ const AllParticipant = () => {
   const updateStatus = async id => {
     console.log(id)
     axios
-      .put(`http://localhost:8000/api/update/${id}`, {
+      .put(`https://sportsmangement.onrender.com/api/update/${id}`, {
         withCredentials: true
       })
       .then(res => {
@@ -41,7 +41,7 @@ const AllParticipant = () => {
 
   const handleDelete = id => {
     fetch(
-      `http://localhost:8000/api/deleteDonation/${id}`,
+      `https://sportsmangement.onrender.com/api/deleteDonation/${id}`,
       {
         method: 'DELETE'
       }

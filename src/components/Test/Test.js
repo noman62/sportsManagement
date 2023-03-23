@@ -12,7 +12,7 @@ const Test = () => {
   const user = useSelector(selectUser)
   const getAllUser = async () => {
     const { data } = await axios.get(
-      'http://localhost:8000/api/allUser'
+      'https://sportsmangement.onrender.com/api/allUser'
     )
     setAllUser(data)
     console.log(data)
@@ -22,7 +22,7 @@ const Test = () => {
   }, [])
   const handleDelete = id => {
     console.log("delete",id);
-    fetch(`http://localhost:8000/api/delete/${id}`, {
+    fetch(`https://sportsmangement.onrender.com/api/delete/${id}`, {
       method: 'DELETE'
     })
       .then(res => res.json())

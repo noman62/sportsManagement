@@ -32,7 +32,7 @@ const ProductModal = () => {
 
 
     axios
-      .post('http://localhost:8000/api/request', {
+      .post('https://sportsmangement.onrender.com/api/request', {
         ...request,
         email: user.user.email
       })

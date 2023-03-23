@@ -11,7 +11,7 @@ const AllNotice = () => {
   const history = useHistory()
   const user = useSelector(selectUser)
   const getAllUser = async () => {
-    const { data } = await axios.get('http://localhost:8000/api/allNotice')
+    const { data } = await axios.get('https://sportsmangement.onrender.com/api/allNotice')
     setAllUser(data)
     console.log(data)
   }
@@ -20,7 +20,7 @@ const AllNotice = () => {
   }, [])
   const handleDelete = id => {
     console.log("emon",id);
-    fetch(`http://localhost:8000/api/deleteNotice/${id}`, {
+    fetch(`https://sportsmangement.onrender.com/api/deleteNotice/${id}`, {
       method: 'DELETE'
     })
       .then(res => res.json())
