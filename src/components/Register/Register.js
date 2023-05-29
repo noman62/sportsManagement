@@ -6,9 +6,12 @@ const Register = () => {
   const [imageURL, setImageURL] = useState(null)
   const history = useHistory()
   const [user, setUser] = useState({
-    name: '',
-    email: '',
-    password: '',
+    name:'',
+    email:'',
+    roll:'',
+    session:'',
+    password:'',
+    department:'',
     imageURL:''
   })
 
@@ -43,7 +46,7 @@ const Register = () => {
     e.preventDefault()
     setLoading(true)
     axios
-      .post('https://sportsmangement.onrender.com/api/register', {
+      .post('http://localhost:8000/api/register', {
         ...user
       })
       .then(response => {
@@ -52,6 +55,7 @@ const Register = () => {
         setTimeout(() => {
           setLoading(false)
         }, 1000)
+        window.alert("done")
         history.push("/login");
       })
       .catch(error => {
@@ -82,7 +86,7 @@ const Register = () => {
                       <input
                         type='text'
                         class='form-control'
-                        placeholder='Full Name Name'
+                        placeholder='Enter your full name'
                         name='name'
                         onChange={handleChange}
                       />
@@ -98,6 +102,48 @@ const Register = () => {
                         class='form-control'
                         placeholder='User Email ID'
                         name='email'
+                        onChange={handleChange}
+                      />
+                    </div>
+                    <div class='input-group mb-3 input-group-md'>
+                      <div class='input-group-prepend'>
+                        <span class='input-group-text'>
+                          <i class='fa-solid fa-envelope'></i>
+                        </span>
+                      </div>
+                      <input
+                        type='text'
+                        class='form-control'
+                        placeholder='Enter your Student ID'
+                        name='roll'
+                        onChange={handleChange}
+                      />
+                    </div>
+                    <div class='input-group mb-3 input-group-md'>
+                      <div class='input-group-prepend'>
+                        <span class='input-group-text'>
+                          <i class='fa-solid fa-envelope'></i>
+                        </span>
+                      </div>
+                      <input
+                        type='text'
+                        class='form-control'
+                        placeholder='Enter your Session'
+                        name='session'
+                        onChange={handleChange}
+                      />
+                    </div>
+                    <div class='input-group mb-3 input-group-md'>
+                      <div class='input-group-prepend'>
+                        <span class='input-group-text'>
+                          <i class='fa-solid fa-envelope'></i>
+                        </span>
+                      </div>
+                      <input
+                        type='text'
+                        class='form-control'
+                        placeholder='Enter your Department'
+                        name='department'
                         onChange={handleChange}
                       />
                     </div>

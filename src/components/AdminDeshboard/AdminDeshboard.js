@@ -21,7 +21,6 @@ const AdminDeshboard = () => {
 
   return (
     <div>
-
       <Navbar />
       <div class='w-100'>
         <div class='container pill2'>
@@ -30,6 +29,19 @@ const AdminDeshboard = () => {
               <nav>
                 <div class='nav nav-tabs' id='nav-tab' role='tablist'>
                   {user !== null && user.user && user.user.role === 'user' && (
+                    <a
+                      class='nav-item nav-link active'
+                      id='nav-admin-profile-tab'
+                      data-toggle='tab'
+                      href='#nav-admin-profile'
+                      role='tab'
+                      aria-controls='nav-admin-profile'
+                      aria-selected='true'
+                    >
+                      Profile
+                    </a>
+                  )}
+                    {user !== null && user.user && user.user.role === 'teacher' && (
                     <a
                       class='nav-item nav-link active'
                       id='nav-admin-profile-tab'
@@ -113,7 +125,7 @@ const AdminDeshboard = () => {
                       </a>
 
                       <a class='nav-item nav-link' href='/uploadnotice'>
-                       Add Notice
+                        Add Notice
                       </a>
                       <a class='nav-item nav-link' href='/product'>
                         Items
@@ -125,15 +137,95 @@ const AdminDeshboard = () => {
                         Fixture
                       </a> */}
                       {/* <li class='nav-item px-2'> */}
-              <NavDropdown title="Fixture" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/footballfixture">Football</NavDropdown.Item>
-              <NavDropdown.Item href="/volleyballfixture">
-                Volleyball
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/tabbletennisfixture">Badminton</NavDropdown.Item>
-              <NavDropdown.Item href="/badmintonfixture">Tabble Tennis</NavDropdown.Item>
-            </NavDropdown>
-            {/* </li> */}
+                      <NavDropdown title="Fixture" id="basic-nav-dropdown">
+                        <NavDropdown.Item href="/footballfixture">Football</NavDropdown.Item>
+                        <NavDropdown.Item href="/volleyballfixture">
+                          Volleyball
+                        </NavDropdown.Item>
+                        <NavDropdown.Item href="/tabbletennisfixture">Badminton</NavDropdown.Item>
+                        <NavDropdown.Item href="/badmintonfixture">Tabble Tennis</NavDropdown.Item>
+                      </NavDropdown>
+                      {/* </li> */}
+                    </>
+                  )}
+
+
+                  {user !== null && user.user && user.user.role === 'teacher' && (
+                    <>
+                      <a
+                        class='nav-item nav-link'
+                        id='nav-donate-list-tab'
+                        data-toggle='tab'
+                        href='#nav-donate-list'
+                        role='tab'
+                        aria-controls='nav-donate-list'
+                        aria-selected='false'
+                      >
+                        Participant List
+                      </a>
+                      <a
+                        class='nav-item nav-link'
+                        id='nav-user-list-tab'
+                        data-toggle='tab'
+                        href='#nav-user-list'
+                        role='tab'
+                        aria-controls='nav-user-list'
+                        aria-selected='false'
+                      >
+                        All Request List
+                      </a>
+                      <a
+                        class='nav-item nav-link'
+                        id='nav-notice-list-tab'
+                        data-toggle='tab'
+                        href='#nav-notice-list'
+                        role='tab'
+                        aria-controls='nav-notice-list'
+                        aria-selected='false'
+                      >
+                        All Notice
+                      </a>
+                      <a
+                        class='nav-item nav-link'
+                        id='nav-product-list-tab'
+                        data-toggle='tab'
+                        href='#nav-product-list'
+                        role='tab'
+                        aria-controls='nav-product-list'
+                        aria-selected='false'
+                      >
+                        All Sports Item
+                      </a>
+                      <a
+                        class='nav-item nav-link'
+                        id='nav-event-list-tab'
+                        data-toggle='tab'
+                        href='#nav-event-list'
+                        role='tab'
+                        aria-controls='nav-event-list'
+                        aria-selected='false'
+                      >
+                        All Event
+                      </a>
+
+                      <a class='nav-item nav-link' href='/uploadnotice'>
+                        Add Notice
+                      </a>
+                      <a class='nav-item nav-link' href='/product'>
+                        Items
+                      </a>
+                      <a class='nav-item nav-link' href='/uploadEvent'>
+                        Events
+                      </a>
+                      <NavDropdown title="Fixture" id="basic-nav-dropdown">
+                        <NavDropdown.Item href="/footballfixture">Football</NavDropdown.Item>
+                        <NavDropdown.Item href="/volleyballfixture">
+                          Volleyball
+                        </NavDropdown.Item>
+                        <NavDropdown.Item href="/tabbletennisfixture">Badminton</NavDropdown.Item>
+                        <NavDropdown.Item href="/badmintonfixture">Tabble Tennis</NavDropdown.Item>
+                      </NavDropdown>
+                      {/* </li> */}
                     </>
                   )}
                   {user !== null && user.user && user.user.role === 'user' && (
@@ -194,6 +286,20 @@ const AdminDeshboard = () => {
                             </tr>
                           </>
                         )}
+                      {user !== null &&
+                        user.user &&
+                        user.user.role === 'teacher' && (
+                          <>
+                            <tr>
+                              <th>Name</th>
+                              <td>{user?.user?.name}</td>
+                            </tr>
+                            <tr>
+                              <th>Email</th>
+                              <td>{user?.user?.email}</td>
+                            </tr>
+                          </>
+                        )}
                       {user !== null && user.user && user.user.role === 'user' && (
                         <>
                           <tr>
@@ -204,8 +310,18 @@ const AdminDeshboard = () => {
                             <th>Email</th>
                             <td>{user?.user?.email}</td>
                           </tr>
-
-                       
+                          <tr>
+                            <th>Student ID</th>
+                            <td>{user?.user?.roll}</td>
+                          </tr>
+                          <tr>
+                            <th>Session</th>
+                            <td>{user?.user?.session}</td>
+                          </tr>
+                          <tr>
+                            <th>Department</th>
+                            <td>{user?.user?.department}</td>
+                          </tr>
                         </>
                       )}
                     </tbody>
@@ -226,6 +342,12 @@ const AdminDeshboard = () => {
                   )}
 
                   {user !== null && user.user && user.user.role === 'admin' && (
+                    <>
+                      <AllParticipant />
+                    </>
+                  )}
+
+                  {user !== null && user.user && user.user.role === 'teacher' && (
                     <>
                       <AllParticipant />
                     </>
@@ -263,6 +385,11 @@ const AdminDeshboard = () => {
                       <AllRequest />
                     </>
                   )}
+                     {user !== null && user.user && user.user.role === 'teacher' && (
+                    <>
+                      <AllRequest />
+                    </>
+                  )}
                 </div>
                 <div
                   class='tab-pane fade'
@@ -283,6 +410,12 @@ const AdminDeshboard = () => {
                       <AllNotice />
                     </>
                   )}
+                  
+                  {user !== null && user.user && user.user.role === 'teacher' && (
+                    <>
+                      <AllNotice />
+                    </>
+                  )}
                 </div>
                 <div
                   class='tab-pane fade'
@@ -291,6 +424,11 @@ const AdminDeshboard = () => {
                   aria-labelledby='nav-product-list-tab'
                 >
                   {user !== null && user.user && user.user.role === 'admin' && (
+                    <>
+                      <AllProduct />
+                    </>
+                  )}
+                    {user !== null && user.user && user.user.role === 'teacher' && (
                     <>
                       <AllProduct />
                     </>
@@ -307,30 +445,17 @@ const AdminDeshboard = () => {
                       <AllEvent />
                     </>
                   )}
+                    {user !== null && user.user && user.user.role === 'teacher' && (
+                    <>
+                      <AllEvent />
+                    </>
+                  )}
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/* <div class='footer bg-dark text-light'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-sm-12'>
-              <h1>Lorem, ipsum dolor.</h1>
-              <p>
-                <b>Phone :</b> 7r8374823
-              </p>
-              <p>
-                <b>Mobile :</b> 7r8374823
-              </p>
-              <p>
-                <b>Email :</b> 7r8374823
-              </p>
-            </div>
-          </div>
-        </div>
-      </div> */}
     </div>
   )
 }
