@@ -108,7 +108,7 @@ const Register = () => {
                     <div class='input-group mb-3 input-group-md'>
                       <div class='input-group-prepend'>
                         <span class='input-group-text'>
-                          <i class='fa-solid fa-envelope'></i>
+                          <i class='fas fa-id-card'></i>
                         </span>
                       </div>
                       <input
@@ -122,7 +122,7 @@ const Register = () => {
                     <div class='input-group mb-3 input-group-md'>
                       <div class='input-group-prepend'>
                         <span class='input-group-text'>
-                          <i class='fa-solid fa-envelope'></i>
+                          <i class='fas fa-calendar-alt'></i>
                         </span>
                       </div>
                       <input
@@ -136,7 +136,7 @@ const Register = () => {
                     <div class='input-group mb-3 input-group-md'>
                       <div class='input-group-prepend'>
                         <span class='input-group-text'>
-                          <i class='fa-solid fa-envelope'></i>
+                          <i class='fas fa-university'></i>
                         </span>
                       </div>
                       <input
