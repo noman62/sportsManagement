@@ -49,7 +49,7 @@ const Footer = () => {
         </div>
       </div>
       <div className='text-center py-3 bg-dark'>
-        <p><small className='text-white'>Copyright © 2023 Physical Education | Powered by Ahmudul Hasan, NSTU.</small></p>
+        <p><small className='text-white'>Copyright © 2023 Physical Education | Powered by Asadullah Al Noman, NSTU.</small></p>
       </div>
     </div>
   )
