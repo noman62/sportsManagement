@@ -55,7 +55,7 @@ const Register = () => {
         setTimeout(() => {
           setLoading(false)
         }, 1000)
-        window.alert("done")
+        window.alert("Registration Successfully")
         history.push("/login");
       })
       .catch(error => {
