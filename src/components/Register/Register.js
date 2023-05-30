@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom';
-
+import { SyncOutlined } from '@ant-design/icons'
 const Register = () => {
   const [imageURL, setImageURL] = useState(null)
   const history = useHistory()
@@ -180,7 +180,7 @@ const Register = () => {
                 </div>
                     <div>
                       <button type='submit' class='btn btn-md login-btn m-3'>
-                        Registration
+                      {loading ? <SyncOutlined spin /> : 'SUBMIT'}
                       </button>
                     </div>
                   </form>

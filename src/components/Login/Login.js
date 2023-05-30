@@ -4,52 +4,54 @@ import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 import { loggin } from '../../features/userSlice/userSlice'
+import { SyncOutlined } from '@ant-design/icons'
+
 
 const Login = () => {
-  
-    const [user, setUser] = useState({
-        email: '',
-        password: ''
+
+  const [user, setUser] = useState({
+    email: '',
+    password: ''
+  })
+  const [loading, setLoading] = useState(false)
+
+  const history = useHistory()
+  const dispatch = useDispatch()
+  //Handle form state
+  const handleChange = e => {
+    const newUserInfo = { ...user }
+    newUserInfo[e.target.name] = e.target.value
+    setUser(newUserInfo)
+  }
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    setLoading(true)
+    axios
+      .post('https://sportsmangement.onrender.com/api/login', {
+        ...user
       })
-      const [loading, setLoading] = useState(false)
-    
-      const history = useHistory()
-      const dispatch = useDispatch()
-      //Handle form state
-      const handleChange = e => {
-        const newUserInfo = { ...user }
-        newUserInfo[e.target.name] = e.target.value
-        setUser(newUserInfo)
-      }
-      
-      const handleSubmit = e => {
-        e.preventDefault()
-        setLoading(true)
-        axios
-          .post('https://sportsmangement.onrender.com/api/login', {
-            ...user
+      .then(response => {
+        console.log('success', response.data)
+
+        dispatch(
+          loggin({
+            user: response.data
           })
-          .then(response => {
-            console.log('success', response.data)
-            
-            dispatch(
-              loggin({
-                user: response.data
-              })
-            )
-            
-            setTimeout(() => {
-              setLoading(false)
-            }, 1000)
-    
-            if (response.data.email) {
-              console.log(response.data.email)
-              history.push('home')
-            }
-            
-          })
-        
-      }
+        )
+
+        setTimeout(() => {
+          setLoading(false)
+        }, 1000)
+
+        if (response.data.email) {
+
+          history.push('home')
+        }
+
+      })
+
+  }
   return (
     <div>
       <div class='container-fluid login '>
@@ -58,7 +60,7 @@ const Login = () => {
             <div class='container dept '>
               <div class='row'>
                 <div class='col-sm-5 p-5 text-center'>
-                <h4 className='loginName'> Noakhali Science and Technology University</h4>
+                  <h4 className='loginName'> Noakhali Science and Technology University</h4>
                   <hr />
                 </div>
                 <div class='col-sm-7 p-5 text-center'>
@@ -92,14 +94,9 @@ const Login = () => {
                         onChange={handleChange}
                       />
                     </div>
-                    {/* <div class="form-check">
-                                    <label class="form-check-label">
-                                      <input type="checkbox" class="form-check-input" value=""/>Remember Password
-                                    </label>
-                                  </div> */}
                     <div>
-                      <button type='submit' class='btn btn-md login-btn m-3'>
-                        Log In
+                      <button type='submit' class='btn btn-md bg-white login-btn m-3'>
+                        {loading ? <SyncOutlined spin /> : 'SUBMIT'}
                       </button>
                     </div>
                   </form>
