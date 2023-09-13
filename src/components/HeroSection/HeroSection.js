@@ -16,7 +16,7 @@ function IndividualIntervalsExample() {
       <Carousel.Item interval={3500}>
         <img
           className="d-block m-auto w-75"
-          src="../assets/image2.jpg"
+          src="../assets/image2.JPG"
           alt="Second slide"
         />
         <Carousel.Caption>
